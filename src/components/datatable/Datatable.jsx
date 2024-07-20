@@ -17,9 +17,11 @@ const Datatable = ({columns}) => {
       renderCell: (params) => {
         return (
           <div className="cellAction">
-            <Link to={"/" + type + "/" + params.row.id} style={{ textDecoration: "none" }}>
-              <span className="viewButton">View</span>
-            </Link>
+            {type !== "categories" && (
+              <Link to={"/" + type + "/" + params.row.id} style={{ textDecoration: "none" }}>
+                <span className="viewButton">View</span>
+              </Link>
+            )}
             <span>
               <span
                 className="deleteButton"

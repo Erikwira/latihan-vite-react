@@ -9,6 +9,9 @@ import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import CategoryIcon from '@mui/icons-material/Category';
 import { DarkModeContext } from "../../context/darkModeContext";
 import { useContext } from "react";
+import { signOut } from "firebase/auth";
+import { auth } from "../../firebase";
+import { AuthContext } from "../../context/AuthContext";
 
 const Sidebar = () => {
   const { dispatch } = useContext(DarkModeContext);
@@ -46,7 +49,7 @@ const Sidebar = () => {
             <span>Orders</span>
           </li>
           <Link to="/categories">
-            <li>
+            <li data-testid="categories">
               <CategoryIcon className="icon"></CategoryIcon>
               <span>Categories</span>
             </li>

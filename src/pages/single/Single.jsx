@@ -28,6 +28,9 @@ const Single = ({columns}) => {
           case "products":
             setData({...docSnapData, detailName : docSnapData.title}); 
             break; 
+          case "categories":
+            setData({...docSnapData, detailName : docSnapData.title}); 
+            break; 
           default: 
             break;
         } 

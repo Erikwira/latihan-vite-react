@@ -34,11 +34,11 @@ const Widget = ({ type }) => {
         ),
       };
       break;
-    case "order":
+    case "product":
       data = {
-        title: "ORDERS",
+        title: "PRODUCTS",
         isMoney: false,
-        link: "View all orders",
+        link: "View all products",
         query:"products",
         icon: (
           <ShoppingCartOutlinedIcon
@@ -51,33 +51,16 @@ const Widget = ({ type }) => {
         ),
       };
       break;
-    case "earning":
+    case "category":
       data = {
-        title: "EARNINGS",
-        isMoney: true,
-        link: "View net earnings",
-        query:"users",
+        title: "CATEGORIES",
+        isMoney: false,
+        link: "View all categories",
+        query:"categories",
         icon: (
           <MonetizationOnOutlinedIcon
             className="icon"
             style={{ backgroundColor: "rgba(0, 128, 0, 0.2)", color: "green" }}
-          />
-        ),
-      };
-      break;
-    case "balance":
-      data = {
-        title: "BALANCE",
-        isMoney: true,
-        link: "See details",
-        query:"users",
-        icon: (
-          <AccountBalanceWalletOutlinedIcon
-            className="icon"
-            style={{
-              backgroundColor: "rgba(128, 0, 128, 0.2)",
-              color: "purple",
-            }}
           />
         ),
       };
